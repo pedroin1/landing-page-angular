@@ -1,3 +1,140 @@
-.test {
-  size: 26px
+@import "../../../color-variables.scss";
+
+main{
+  display: flex;
+  flex-direction: column;
 }
+
+.main-container{
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.first-section{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+
+  img {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.headline{
+  h1{
+    color: #5c5c5c;
+    font-weight: bold;
+  }
+  span {
+    font-size: 64px;
+    font-weight: bold;
+  }
+
+  @media(max-width: 780px){
+    span {
+      font-size: 32px;
+    }
+  }
+
+}
+
+.image-headline{
+  img{
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.benefit-section{
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  h2{
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 28px;
+    font-style: italic;
+
+      b {
+      background: -webkit-linear-gradient(180deg, $light-primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-style: normal;
+    }
+  }
+
+  @media(max-width: 780px){
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+
+    h2{
+      font-size: 16px;
+    }
+  }
+}
+
+.benefit-data{
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  border-bottom: 10px solid $secondary-color;
+  padding-bottom: 40px;
+  font-weight: bold;
+}
+
+.cta-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 64px;
+
+  @media(max-width: 780px){
+    font-size: 32px
+  }
+}
+
+.subcontent-section{
+  display: flex;
+  margin-bottom: 64px;
+  gap: 34px;
+
+  h2, p{
+    font-family: "Poppins", sans-serif;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  img{
+    width: 100%;
+    height: 600px;
+  }
+
+  @media (max-width: 768px) {
+    img{
+      display: none;
+    }
+    flex-direction: column;
+  }
+}
+
+
+.last-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64px;
+
+  h3{
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+}
+
